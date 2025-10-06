@@ -1,13 +1,11 @@
 local w = require("wiki")
-local c = require("wiki.config")
-local config = c.get_config()
 
 vim.api.nvim_create_user_command("WikiSelectVault", function()
-	c.select_vault()
+	w.config.select_vault()
 end, {})
 
 vim.api.nvim_create_user_command("WikiOpen", function()
-	w.open_dir()
+	w.fs.open_dir()
 end, {})
 
 vim.api.nvim_create_autocmd("FileType", {
