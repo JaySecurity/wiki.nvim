@@ -22,4 +22,8 @@ M.setup = function(opts)
 	M.config.set_config(opts)
 end
 
+M.select_line = function() end
+
+print(vim.api.nvim_buf_get_name(0))
+
 return M
